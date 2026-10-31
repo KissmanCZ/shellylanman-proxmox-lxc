@@ -1,0 +1,52 @@
+{
+  "name": "ShellyLanMan",
+  "slug": "shellylanman",
+  "categories": [
+    16
+  ],
+  "date_created": "2026-11-01",
+  "type": "ct",
+  "updateable": true,
+  "privileged": false,
+  "interface_port": 3082,
+  "documentation": "https://github.com/wimmme/shellylanman#readme",
+  "website": "https://github.com/wimmme/shellylanman",
+  "repository": "https://github.com/wimmme/shellylanman",
+  "platforms": [
+    "pve"
+  ],
+  "logo": "https://raw.githubusercontent.com/wimmme/shellylanman/main/docs/images/logo-banner.png",
+  "description": "Discover, monitor and manage Shelly devices on your local network. ShellyLanMan provides live device status, configuration, backups, firmware management, charts and an MCP interface.",
+  "install_methods": [
+    {
+      "type": "default",
+      "script": "ct/shellylanman.sh",
+      "config_path": "/opt/shellylanman_data/shellylanman.env",
+      "resources": {
+        "cpu": 2,
+        "ram": 2048,
+        "hdd": 10,
+        "os": "Debian",
+        "version": "13"
+      }
+    }
+  ],
+  "default_credentials": {
+    "username": null,
+    "password": null
+  },
+  "notes": [
+    {
+      "text": "UI authentication is off by default. Set a password in Settings → Security before allowing access beyond a trusted LAN.",
+      "type": "warning"
+    },
+    {
+      "text": "mDNS discovery requires multicast traffic between the LXC and Shelly devices. Use the same VLAN initially, or configure an mDNS reflector.",
+      "type": "info"
+    }
+  ],
+  "architectures": [
+    "amd64",
+    "arm64"
+  ]
+}
