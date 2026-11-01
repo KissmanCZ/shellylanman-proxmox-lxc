@@ -10,9 +10,9 @@ source "$_cs_boot" 2>/dev/null || source <(curl -fsSL "${COMMUNITY_SCRIPTS_CORE_
 
 APP="ShellyLanMan"
 var_tags="${var_tags:-network;home-automation;shelly}"
-var_cpu="${var_cpu:-2}"
-var_ram="${var_ram:-4096}"
-var_disk="${var_disk:-16}"
+var_cpu="${var_cpu:-1}"
+var_ram="${var_ram:-512}"
+var_disk="${var_disk:-2}"
 var_os="${var_os:-debian}"
 var_version="${var_version:-13}"
 var_unprivileged="${var_unprivileged:-1}"
