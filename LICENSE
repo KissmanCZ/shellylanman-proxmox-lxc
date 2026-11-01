@@ -2,6 +2,29 @@ MIT License
 
 Copyright (c) 2026 Jan Pichrt
 
+SCOPE OF THIS LICENSE
+
+This license applies only to the original installation scripts, configuration
+files, and documentation authored and maintained in the
+KissmanCZ/shellylanman-proxmox-lxc repository.
+
+It does not grant or modify any rights to third-party software that may be
+downloaded, installed, built, or used by these scripts. Such software remains
+subject to its respective license.
+
+In particular:
+
+- ShellyLanMan is licensed under GPL-3.0-or-later.
+  https://github.com/wimmme/shellylanman
+
+- Proxmox Community Scripts Core is licensed under MIT.
+  https://github.com/community-scripts/core
+
+The licenses of third-party components remain unchanged and take precedence
+for those respective components.
+
+MIT LICENSE TERMS
+
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
