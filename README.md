@@ -47,6 +47,39 @@ ShellyLanMan uses local-network discovery to find Shelly devices. For the simple
 
 For devices on other VLANs or subnets, configure an mDNS reflector where required, or use ShellyLanMan's IP-range discovery. Ensure that multicast and the required device-management traffic are permitted by the network and Proxmox firewall rules.
 
+### mDNS configuration in LXC
+
+> [!IMPORTANT]
+> **Select the network interface explicitly when running ShellyLanMan inside an LXC container.**
+>
+> Automatic interface selection using **All devices** may fail to initialize mDNS discovery in an LXC, even when the container's network interface supports multicast.
+>
+> To configure mDNS:
+>
+> 1. Open **Settings → Network** in ShellyLanMan.
+> 2. Find the network interface selection setting.
+> 3. Change it from **All devices** to the actual network interface used by the container, normally `eth0`.
+> 4. Save the setting and run a device rescan.
+>
+> This was confirmed to resolve the mDNS discovery issue in a Debian 13 unprivileged Proxmox LXC installation.
+
+To identify the network interface inside the container, run:
+
+```bash
+ip -br link
+```
+
+Example output:
+
+```text
+lo       UNKNOWN
+eth0     UP
+```
+
+Select `eth0` in ShellyLanMan's network settings.
+
+**There is no need to enable privileged mode, host networking, or change the Proxmox container configuration to resolve this particular interface-selection issue.**
+
 ### Security
 
 UI authentication is disabled by default. Set a password in **Settings → Security** before making the interface available beyond a trusted management network.
