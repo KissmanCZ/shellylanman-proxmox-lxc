@@ -2,7 +2,7 @@
 
 A community-maintained installer for running [ShellyLanMan](https://github.com/wimmme/shellylanman) in a native Debian LXC container on Proxmox VE.
 
-The installer builds ShellyLanMan from its upstream source and runs it as a systemd service. **Docker is not used**, and Go, Node.js, and the application build dependencies are installed inside the LXC—not on the Proxmox host.
+The installer builds ShellyLanMan from its upstream source and runs it as a systemd service. **Docker is not used**, and Go, Node.js, and the application build dependencies are installed inside the LXC, not on the Proxmox host.
 
 Maintained by [Jan Pichrt (@KissmanCZ)](https://github.com/KissmanCZ).
 
