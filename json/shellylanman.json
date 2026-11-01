@@ -12,6 +12,9 @@
   "documentation": "https://github.com/wimmme/shellylanman#readme",
   "website": "https://github.com/wimmme/shellylanman",
   "repository": "https://github.com/wimmme/shellylanman",
+  "architectures": [
+    "amd64"
+  ],
   "platforms": [
     "pve"
   ],
@@ -24,8 +27,8 @@
       "config_path": "/opt/shellylanman_data/shellylanman.env",
       "resources": {
         "cpu": 2,
-        "ram": 2048,
-        "hdd": 10,
+        "ram": 4096,
+        "hdd": 16,
         "os": "Debian",
         "version": "13"
       }
@@ -44,9 +47,5 @@
       "text": "mDNS discovery requires multicast traffic between the LXC and Shelly devices. Use the same VLAN initially, or configure an mDNS reflector.",
       "type": "info"
     }
-  ],
-  "architectures": [
-    "amd64",
-    "arm64"
   ]
 }
