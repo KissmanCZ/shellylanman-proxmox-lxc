@@ -22,9 +22,9 @@ The installer creates a Debian 13 LXC and builds the application inside it. Revi
 |---|---:|
 | Operating system | Debian 13 |
 | Container | Unprivileged LXC |
-| CPU | 2 cores |
-| Memory | 4 GB |
-| Disk | 16 GB |
+| CPU | 1 cores |
+| Memory | 512 MB |
+| Disk | 2 GB |
 | Web interface | TCP 3082 |
 
 The application service runs as root inside the unprivileged LXC, following the Community Scripts convention. Proxmox maps the container UID into an unprivileged host UID range; this does not grant the service root privileges on the Proxmox host.
